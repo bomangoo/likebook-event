@@ -1,8 +1,8 @@
-import 'normalize.css';
 import { css } from '@emotion/react';
 
 export const globalStyles = css`
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Grandiflora+One&display=swap');
 
     @font-face {
         font-family: 'Pretendard Variable';
@@ -30,8 +30,9 @@ export const globalStyles = css`
     }
 
     body {
-        font-family: 'Pretendard Variable', 'Montserrat', BlinkMacSystemFont,
-            'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-family:
+            'Pretendard Variable', 'Montserrat', 'Helvetica Neue', Arial,
+            sans-serif;
         line-height: 1.6;
         color: #333;
     }

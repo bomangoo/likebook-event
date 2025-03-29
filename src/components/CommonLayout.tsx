@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
-import Header from '@/components/Header';
-import SiteHead from '@/components/SiteHead';
 import { ReactNode } from 'react';
-import Footer from '@/components/Footer';
 
 export default function CommonLayout(props: {
     title?: string;
@@ -11,20 +8,16 @@ export default function CommonLayout(props: {
 }) {
     const { title, description, children } = props;
 
-    return (
-        <>
-            <SiteHead title={title} description={description} />
-            <StyledCommomWrapper>
-                <Header />
-                {children}
-                <Footer />
-            </StyledCommomWrapper>
-        </>
-    );
+    return <StyledCommomWrapper>{children}</StyledCommomWrapper>;
 }
 
 const StyledCommomWrapper = styled.main`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
     position: relative;
     width: 100%;
     text-align: center;
+    background-color: #ffe8ec;
 `;
