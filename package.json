@@ -5,7 +5,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build && next-sitemap",
+        "build": "next build",
         "start": "next start",
         "lint": "next lint",
         "predeploy": "yarn build",
@@ -35,7 +35,6 @@
         "eslint-plugin-react": "^7.34.3",
         "gh-pages": "^6.3.0",
         "lint-staged": "^15.2.7",
-        "next-sitemap": "^4.2.3",
         "prettier": "^3.3.2",
         "typescript": "^5"
     }
