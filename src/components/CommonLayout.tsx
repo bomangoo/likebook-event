@@ -1,12 +1,8 @@
 import styled from '@emotion/styled';
 import { ReactNode } from 'react';
 
-export default function CommonLayout(props: {
-    title?: string;
-    description?: string;
-    children: ReactNode;
-}) {
-    const { title, description, children } = props;
+export default function CommonLayout(props: { children: ReactNode }) {
+    const { children } = props;
 
     return <StyledCommomWrapper>{children}</StyledCommomWrapper>;
 }

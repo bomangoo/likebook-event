@@ -12,6 +12,6 @@ const App: FC<AppProps> = (props) => {
             <Component {...pageProps} />
         </>
     );
-}
+};
 
 export default App;
