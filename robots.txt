@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: 사이트명
+
+# Sitemaps
+Sitemap: 사이트명/sitemap.xml
