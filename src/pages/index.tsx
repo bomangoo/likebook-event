@@ -1,9 +1,6 @@
 import styled from '@emotion/styled';
 import CommonLayout from '@/components/CommonLayout';
-import Image from 'next/image';
 import Link from 'next/link';
-
-import Girl from '@/static/images/girl.png';
 import html2canvas from 'html2canvas';
 
 export default function Company() {
@@ -28,7 +25,7 @@ export default function Company() {
                 <h1>당신을 위한 한 줄 문장</h1>
 
                 <StyledWordBox>
-                    <Image src={Girl} alt="" />
+                    <img src="/likebook-event/static/images/girl.png" alt="" />
                     <p>어두운 밤이 깊을수록 새벽은 가까워집니다</p>
                 </StyledWordBox>
             </StyledWrapper>

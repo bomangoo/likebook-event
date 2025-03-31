@@ -8,7 +8,7 @@ export default function Fondue() {
         <StyledFondueWrapper>
             <video
                 id="fondueVideo"
-                src="/static/images/fondue1.mp4"
+                src="/likebook-event/static/images/fondue1.mp4"
                 autoPlay
                 muted
                 playsInline
