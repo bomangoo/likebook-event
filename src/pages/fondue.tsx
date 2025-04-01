@@ -8,12 +8,12 @@ export default function Fondue() {
         <StyledFondueWrapper>
             <video
                 id="fondueVideo"
-                src="/static/images/fondue1.mp4"
+                src="static/images/fondue1.mp4"
                 autoPlay
                 muted
                 playsInline
                 onEnded={() => setVideoEnd(true)}
-                poster="/static/images/fondue1-poster.png"
+                poster="static/images/fondue1-poster.png"
             />
             {videoEnd && (
                 <StyledButtonWrapper>

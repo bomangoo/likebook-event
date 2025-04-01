@@ -41,7 +41,7 @@ export default function Company() {
                 <h1>당신을 위한 한 줄 문장</h1>
 
                 <StyledWordBox>
-                    <img src="/static/images/girl.png" alt="" />
+                    <img src="static/images/girl.png" alt="" />
                     {randomWord && <p>{randomWord}</p>}
                 </StyledWordBox>
             </StyledWrapper>
