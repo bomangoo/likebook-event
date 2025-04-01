@@ -1,13 +1,20 @@
+import { useEffect, useState } from 'react';
 import styled from '@emotion/styled';
 import CommonLayout from '@/components/CommonLayout';
 import Link from 'next/link';
 import html2canvas from 'html2canvas';
 
+import { words } from '@/contents/words';
+
 export default function Company() {
+    const [randomWord, setRandomWord] = useState('');
+
     const handleDownloadWord = () => {
         const target = document.getElementById('content');
         if (!target) {
-            return alert('결과 저장에 실패했습니다.');
+            return alert(
+                '문장 저장에 실패했습니다. 라이크북 관계자에 문의해주세요!'
+            );
         }
         html2canvas(target).then((canvas) => {
             const link = document.createElement('a');
@@ -19,14 +26,23 @@ export default function Company() {
         });
     };
 
+    useEffect(() => {
+        const getRandomWords = () => {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            setRandomWord(words[randomIndex]);
+        };
+
+        getRandomWords();
+    }, []);
+
     return (
         <CommonLayout>
             <StyledWrapper id="content">
                 <h1>당신을 위한 한 줄 문장</h1>
 
                 <StyledWordBox>
-                    <img src="/likebook-event/static/images/girl.png" alt="" />
-                    <p>어두운 밤이 깊을수록 새벽은 가까워집니다</p>
+                    <img src="/static/images/girl.png" alt="" />
+                    {randomWord && <p>{randomWord}</p>}
                 </StyledWordBox>
             </StyledWrapper>
 
@@ -42,7 +58,7 @@ export default function Company() {
 }
 
 const StyledWrapper = styled.div`
-    padding: 20px 20px 50px;
+    padding: 20px 20px 30%;
     background-color: #ffe8ec;
 
     > h1 {
@@ -55,10 +71,12 @@ const StyledWrapper = styled.div`
 const StyledWordBox = styled.div`
     position: relative;
     width: 100%;
-    padding: 90px 30px 80px;
+    padding: 85px 30px 80px;
     margin: 100px 0;
+    background-color: #fff5f5;
     border: 1px solid #ffb2b2;
     border-radius: 10px;
+    white-space: pre-wrap;
     box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, 0.1);
 
     > img {
@@ -74,6 +92,7 @@ const StyledWordBox = styled.div`
         font-family: 'Grandiflora One', cursive;
         color: #000;
         word-break: keep-all;
+        font-weight: bold;
     }
 `;
 
