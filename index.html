@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#fff7ef" />
+    <title>나는 어떤 여행자인가?</title>
+    <meta name="description" content="여섯 가지 상황으로 알아보는 나의 여행 스타일 테스트" />
+    <meta property="og:title" content="나는 어떤 여행자인가?" />
+    <meta property="og:description" content="여섯 가지 상황으로 알아보는 나의 여행 스타일 테스트" />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧳</text></svg>"
+    />
+  </head>
+  <body>
+    <div class="app">
+      <!-- 메인 -->
+      <section class="screen screen-main is-active" id="screen-main" aria-labelledby="main-title">
+        <div class="clouds" aria-hidden="true">
+          <span class="cloud c1">☁️</span>
+          <span class="cloud c2">☁️</span>
+          <span class="plane">✈️</span>
+        </div>
+        <p class="badge">여행 스타일 테스트</p>
+        <h1 class="main-title" id="main-title">나는 어떤<br />여행자인가?</h1>
+        <div class="suitcase" aria-hidden="true">🧳</div>
+        <div class="type-icons" aria-hidden="true">
+          <span>🌄</span><span>🎒</span><span>🏙️</span><span>💞</span>
+        </div>
+        <p class="main-desc">
+          여섯 가지 여행 상황에서<br />
+          <strong>가장 나다운 선택</strong>을 골라보세요.<br />
+          정답은 없어요!
+        </p>
+        <button class="btn btn-primary" id="btn-start" type="button">테스트 시작하기</button>
+        <p class="footnote">재미로 보는 대화용 콘텐츠예요 · 약 1분</p>
+      </section>
+
+      <!-- 테스트 -->
+      <section class="screen screen-test" id="screen-test" aria-live="polite">
+        <header class="test-head">
+          <button class="icon-btn" id="btn-back" type="button" aria-label="이전 질문">‹</button>
+          <div class="progress" role="progressbar" aria-valuemin="1" aria-valuemax="6" id="progress">
+            <div class="progress-bar" id="progress-bar"></div>
+            <span class="progress-plane" id="progress-plane" aria-hidden="true">✈️</span>
+          </div>
+          <span class="progress-num" id="progress-num">1/6</span>
+        </header>
+        <div class="question-wrap" id="question-wrap">
+          <div class="q-emoji" id="q-emoji" aria-hidden="true"></div>
+          <p class="q-label" id="q-label">Q1</p>
+          <h2 class="q-text" id="q-text"></h2>
+          <ul class="options" id="options"></ul>
+        </div>
+      </section>
+
+      <!-- 결과 -->
+      <section class="screen screen-result" id="screen-result" aria-labelledby="result-name">
+        <p class="result-intro">나의 여행 스타일은</p>
+        <div class="result-card" id="result-card">
+          <div class="result-emoji" id="result-emoji" aria-hidden="true"></div>
+          <h2 class="result-name" id="result-name"></h2>
+          <p class="result-tagline" id="result-tagline"></p>
+          <ul class="chips" id="result-keywords"></ul>
+        </div>
+
+        <div class="panel">
+          <h3 class="panel-title">이런 여행자예요</h3>
+          <p id="result-desc"></p>
+        </div>
+
+        <div class="panel">
+          <h3 class="panel-title">추천 여행지</h3>
+          <ul class="places" id="result-places"></ul>
+        </div>
+
+        <div class="panel panel-message">
+          <h3 class="panel-title">나에게 건네는 말</h3>
+          <p id="result-message"></p>
+        </div>
+
+        <div class="panel panel-talk">
+          <h3 class="panel-title">함께 이야기해 볼까요?</h3>
+          <p id="result-talk"></p>
+        </div>
+
+        <div class="result-actions">
+          <button class="btn btn-primary" id="btn-share" type="button">테스트 공유하기</button>
+          <button class="btn btn-ghost" id="btn-retry" type="button">다시 해보기</button>
+        </div>
+        <p class="footnote">유형은 재미를 위한 구분이며 성격을 진단하는 검사는 아니에요.</p>
+      </section>
+
+      <div class="toast" id="toast" role="status"></div>
+    </div>
+
+    <script src="assets/data.js"></script>
+    <script src="assets/app.js"></script>
+  </body>
+</html>
