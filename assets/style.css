@@ -121,13 +121,6 @@ button {
   box-shadow: 0 2px 0 var(--line);
 }
 
-.footnote {
-  margin: 14px 0 0;
-  color: var(--ink-soft);
-  font-size: 13px;
-  text-align: center;
-}
-
 /* ---------- 메인 ---------- */
 .screen-main {
   align-items: center;
